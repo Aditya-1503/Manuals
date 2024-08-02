@@ -18,7 +18,9 @@ X = np.reshape(X, (-1,3))
 
 
 print(X)
-
+#[[0 1 2]
+# [3 4 5]
+# [6 7 8]]
 
 # In[4]:
 
@@ -30,7 +32,9 @@ X[X % 2 == 1] = -1
 
 
 print(X)
-
+#[[ 0 -1  2]
+# [-1  4 -1]
+# [ 6 -1  8]]
 
 # In[6]:
 
@@ -52,12 +56,8 @@ positions_equal = np.where(mask_equal)[0]
 
 
 print(positions_greater, positions_equal)
+# [1 2 4 5 6 7 8 9] [0]
 
-
-# In[9]:
-
-
-print(positions_equal)
 
 
 # In[10]:
@@ -70,6 +70,11 @@ newX = np.arange(100).reshape(5, -1)
 
 
 print(newX[:,:4])
+#[[ 0  1  2  3]
+# [20 21 22 23]
+# [40 41 42 43]
+# [60 61 62 63]
+# [80 81 82 83]]
 
 
 # In[12]:
@@ -82,6 +87,7 @@ randArr = np.random.randint(30,41, [10])
 
 
 print(randArr)
+# [39 37 38 40 36 32 34 32 32 31]
 
 
 # In[14]:
@@ -109,7 +115,9 @@ E = np.subtract(A,B)
 print(np.sum(A)) #sum of all elements in A
 print(np.sum(B, axis = 0)) # sum of all columns in B
 print(np.sum(C, axis = 1))
-
+#46
+#[12 15 19]
+#[31 30 31]
 
 # In[18]:
 
@@ -121,7 +129,9 @@ D = np.dot(A,B)
 
 
 print(D)
-
+#[[ 18  24  31]
+# [ 54  69  88]
+# [ 91 116 148]]
 
 # In[20]:
 
@@ -133,13 +143,17 @@ E = np.sort(C)
 
 
 print(E)
-
+#[[ 8 10 13]
+# [ 8 10 12]
+# [ 8 10 13]]
 
 # In[22]:
 
 
 print(np.transpose(E))
-
+#[[ 8  8  8]
+# [10 10 10]
+# [13 12 13]]
 
 
 
